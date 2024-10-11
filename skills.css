@@ -6,7 +6,6 @@ body {
 }
 
 
-
 /* Estilos generales del menú */
 .navbar {
     font-family: 'Montserrat', sans-serif;
@@ -72,6 +71,7 @@ body {
     list-style: none; /* Sin viñetas */
     display: flex; /* Elementos del menú en línea */
     gap: 20px; /* Espaciado entre elementos del menú */
+    font-family: 'Montserrat', sans-serif;  
 }
 
 .navbar-menu li a {
@@ -86,21 +86,36 @@ body {
     color: #a01a58; /* Color al pasar el ratón */
 }
 
-.navbar-contact .btn-primary {
-    /* Usa el mismo estilo que el botón "Hablemos" */
-    background-color: #a01a58;
-    color: white;
-    border: none;
-    padding: 7px 40px;
-    border-radius: 35px;
-    font-weight: medium;
-    transition: background-color 0.4s ease;
+
+.nav-icon {
+    font-size: 24px; /* Tamaño del ícono */
+    transition: color 0.3s ease;
 }
 
-.navbar-contact .btn-primary:hover {
-    background-color: #7a1141; /* Color de fondo al hacer hover */
+.navbar-contact {
+    display: flex;
+    gap: 20px; /* Espaciado entre íconos */
+    align-items: center; /* Centrar verticalmente */
 }
 
+.social-icon {
+    width: 40px; /* Tamaño del ícono */
+    height: auto; /* Mantener la proporción */
+    transition: transform 0.3s ease; /* Efecto de transición */
+}
+
+/* Efecto hover para los íconos */
+.social-icon:hover {
+    transform: scale(1.1); /* Agrandar ligeramente al pasar el mouse */
+}
+
+/* Asegura que los íconos se vean bien en pantallas pequeñas */
+@media (max-width: 768px) {
+    .navbar-contact {
+        margin-top: 15px;
+        justify-content: center;
+    }
+}
 
 
 
